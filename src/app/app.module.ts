@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -11,6 +12,9 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { PersonListComponent } from './person-list/person-list.component';
 import { FilterSelectComponent } from './filter-select/filter-select.component';
 
+import { people } from "./reducers/people";
+import { filter } from "./reducers/filter";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,13 +23,12 @@ import { FilterSelectComponent } from './filter-select/filter-select.component';
     FilterSelectComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     FormsModule,
     HttpModule,
-    StoreModule.provideStore({}),
-    StoreDevtoolsModule.instrumentOnlyWithExtension({
-       maxAge: 5
-     })
+    StoreModule.provideStore({ people, filter }),
+    StoreDevtoolsModule.instrumentOnlyWithExtension()
   ],
   providers: [],
   bootstrap: [AppComponent]
