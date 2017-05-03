@@ -9,12 +9,14 @@ import { PersonInputComponent } from './person-input/person-input.component';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { PersonListComponent } from './person-list/person-list.component';
+import { FilterSelectComponent } from './filter-select/filter-select.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonInputComponent,
-    PersonListComponent
+    PersonListComponent,
+    FilterSelectComponent
   ],
   imports: [
     BrowserModule,
