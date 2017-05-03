@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 
 import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,10 @@ import { StoreModule } from '@ngrx/store';
     BrowserModule,
     FormsModule,
     HttpModule,
-    StoreModule.provideStore({})
+    StoreModule.provideStore({}),
+    StoreDevtoolsModule.instrumentOnlyWithExtension({
+       maxAge: 5
+     })
   ],
   providers: [],
   bootstrap: [AppComponent]
