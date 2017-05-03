@@ -4,13 +4,15 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { PersonInputComponent } from './person-input/person-input.component';
 
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PersonInputComponent
   ],
   imports: [
     BrowserModule,
