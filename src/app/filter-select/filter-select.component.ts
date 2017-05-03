@@ -5,6 +5,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
   templateUrl: './filter-select.component.html',
   styleUrls: ['./filter-select.component.css']
 })
+
 export class FilterSelectComponent {
   public filters = [
     {friendly: "All", action: 'SHOW_ALL'},
