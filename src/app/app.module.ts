@@ -8,11 +8,13 @@ import { PersonInputComponent } from './person-input/person-input.component';
 
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { PersonListComponent } from './person-list/person-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PersonInputComponent
+    PersonInputComponent,
+    PersonListComponent
   ],
   imports: [
     BrowserModule,
