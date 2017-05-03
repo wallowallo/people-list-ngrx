@@ -1,3 +1,17 @@
-<app-filter-select></app-filter-select>
-<app-person-input></app-person-input>
-<app-person-list></app-person-list>
+<h3>Party Planner</h3>
+    <app-filter-select
+      (updateFilter)="updateFilter($event)"
+    >
+  </app-filter-select>
+    <app-person-input
+      (addPerson)="addPerson($event)"
+    >
+  </app-person-input>
+    <app-person-list
+      [people]="people | async"
+      (addGuest)="addGuest($event)"
+      (removeGuest)="removeGuest($event)"
+      (removePerson)="removePerson($event)"
+      (toggleAttending)="toggleAttending($event)"
+    >
+  </app-person-list>
